@@ -1,7 +1,7 @@
 // init the marker locations and include the info along with them in a hash
 function initMap() {
   var cricketPitch = {
-    info: "The Cricket Pitch. Best grass to sit on in Victoria",
+    info: "The Cricket Pitch. Best grass to sit on in Victoria.",
     lat: 48.411951, lng: -123.360136
   };
   var tropicalIsland = {
@@ -16,6 +16,10 @@ function initMap() {
     info: "My place!",
     lat: 48.441391, lng: -123.339482
   };
+  var lunchSpot = {
+    info: "Best spot to have your lunch and view the bay.",
+    lat: 48.821991, lng: -123.590477
+  };
 
   // array of locations with their coordinates and index
   var locations = [
@@ -23,6 +27,7 @@ function initMap() {
     [tropicalIsland.info, tropicalIsland.lat, tropicalIsland.lng, 1],
     [thetisLake.info, thetisLake.lat, thetisLake.lng, 2],
     [myHouse.info, myHouse.lat, myHouse.lng, 3],
+    [lunchSpot.info, lunchSpot.lat, lunchSpot.lng, 4]
   ];
 
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -38,7 +43,7 @@ function initMap() {
   var marker, i;
   for (i = 0; i < locations.length; i++){
     marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2], locations[i][3]),
+      position: new google.maps.LatLng(locations[i][1], locations[i][2], locations[i][3], locations[i][4]),
       map: map
     }); 
 
