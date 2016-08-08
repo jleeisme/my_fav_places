@@ -20,6 +20,10 @@ function initMap() {
     info: "Best spot to have your lunch and view the bay.",
     lat: 48.821991, lng: -123.590477
   };
+  var bkkHome = {
+    info: "My old condo in Bangkok.",
+    lat: 13.683379, lng: 100.548545
+  };
 
   // array of locations with their coordinates and index
   var locations = [
@@ -27,7 +31,8 @@ function initMap() {
     [tropicalIsland.info, tropicalIsland.lat, tropicalIsland.lng, 1],
     [thetisLake.info, thetisLake.lat, thetisLake.lng, 2],
     [myHouse.info, myHouse.lat, myHouse.lng, 3],
-    [lunchSpot.info, lunchSpot.lat, lunchSpot.lng, 4]
+    [lunchSpot.info, lunchSpot.lat, lunchSpot.lng, 4],
+    [bkkHome.info, bkkHome.lat, bkkHome.lng, 5],
   ];
 
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -181,7 +186,7 @@ function initMap() {
   var marker, i;
   for (i = 0; i < locations.length; i++){
     marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2], locations[i][3], locations[i][4]),
+      position: new google.maps.LatLng(locations[i][1], locations[i][2], locations[i][3], locations[i][4], locations[i][5]),
       map: map
     }); 
 
