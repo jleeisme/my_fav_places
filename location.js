@@ -33,6 +33,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
     center: myHouse,
+    // styles to change the colours of the map
     styles: [
       {
         "elementType": "geometry",
@@ -170,10 +171,9 @@ function initMap() {
           }
         ]
       }
-]
+    ]
   });
-
-  // 
+  
   var infowindow = new google.maps.InfoWindow({
   });
 
